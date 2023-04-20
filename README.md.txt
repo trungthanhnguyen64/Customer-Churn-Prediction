@@ -1,26 +1,17 @@
-# DỰ ĐOÁN KHÁCH HÀNG RỜI BỎ
-Nhóm 8 - Nhập môn trí tuệ nhân tạo - 20221 - Đại học Bách Khoa Hà Nội
-## Thành viên nhóm
-* Đàm Việt Anh - 20204627 - anh.dv204627@sis.hust.edu.vn
-* Vũ Việt Anh - 20200053 - anh.vv200053@sis.hust.edu.vn
-* Vũ Đức Quỳnh - 20204684 - quynh.vd204684@sis.hust.edu.vn
-* Nguyễn Đăng Khoa - 20204572 - khoa.nd@sis.hust.edu.vn
-* Trịnh Quang Quân - 20200511 - quan.tq@sis.hust.edu.vn
-### Lời cảm ơn
-  Đây là tệp mã nguồn đồ án môn học Nhập môn trí tuệ nhân tạo, lớp Nhập môn trí tuệ nhân tạo do PGS. TS Thân Quang Khoát phụ trách. Lời đầu tiên, chúng em xin gửi lời cảm ơn đến giảng viên bộ môn là thầy Thân Quang Khoát, đã nhiệt tình giảng dạy và góp ý để chúng em hoàn thành bài tập lớn môn học. Những bài giảng trên nền tảng youtube của thầy là nguồn gợi ý thiết thực cho việc tìm các giải pháp cải thiện cho bài toán. Chúng em xin phép được gắn link youtube bài giảng của thầy tại đây: https://www.youtube.com/@thanquangkhoat4070. Cuối cùng, nhóm chúng em xin kính chúc thầy có thật nhiều sức khỏe, hành phúc và luôn thành công trong sự nghiệp giảng dạy của mình.
-## Hướng dẫn 
-* Đường link đến tập dữ liệu: https://www.kaggle.com/code/vsridevi/capstone-project-churn-prediction/data?scriptVersionId=110749928
-* Mô tả:
-  Một nhà cung cấp dịch vụ DTH (Direct to Home) trên thị trường đang phải đối mặt với những thách thức để giữ chân khách hàng hiện tại do có sự cạnh tranh gay gắt trong tình hình hiện tại. Trong công ty này, một tài khoản có thể có nhiều khách hàng được gắn thẻ, vì thế khi mất một tài khoản, công ty có thể mất nhiều hơn một khách hàng. Đồng thời, chi phí để quáng cáo sản phẩm tới những khách hàng mới thường đắt đỏ hơn với việc giữ chân khách hàng cũ. Do đó, tài khoản rời đi là một vấn đề lớn cần giải quyết. Dự đoán khách hàng rời bỏ có nghĩa là phát hiện khách hàng nào có khả năng rời khỏi dịch vụ hoặc hủy đăng ký dịch vụ. Khi bạn có thể xác định những khách hàng có nguy cơ hủy bỏ, bạn nên biết chính xác hành động tiếp thị nào cần thực hiện cho từng khách hàng riêng lẻ để tối đa hóa cơ hội khách hàng sẽ ở lại.
- <b>Nhiệm vụ vủa bạn là dựa trên tập dữ liệu đã có, xây dựng mô hình có thể dự đoán được khách hàng có khả năng rời bỏ trong tương lai</b>
-* Mã nguồn gồm các file chính:
-  - description.csv: file csv mô tả các trường trong tập dữ liệu
-  - train.csv: tập huấn luyện sau khi được chia tách 
-  - test.csv: tập kiểm tra sau khi được chia tách
-  - split_data.py: file python dùng để chia tập dữ liệu gốc ra làm 2 file train.csv và test.csv, đồng thời cũng dùng để điền lại các giá trị không đồng nhất và giá trị khác biệt có trong tập dữ liệu
-  - exp: thư mục hoạt động chính, bao gồm:
-    - EDA.ipynb: file notebook cho việc khai phá dữ liệu
-    - Datapipeline.py: file python tạo pipeline xử lý dữ liệu
-    - OutlierHandling.py: file python xử lý outlier (viết theo api của scikit-learn)
-    - CrossValidation.ipynb: file notebook thử nghiệm mô hình và lựa chọn, đánh giá bằng kiểm định chéo
-    - Predict.ipynb: file notebook dự đoán lại trên tập kiểm tra
+#Customer Churn Prediction
+## 指示する。
+* データセットへのリンク: https://www.kaggle.com/code/vsridevi/capstone-project-churn-prediction/data?scriptVersionId=110749928
+* 説明:
+  市場の DTH (Direct to Home) サービス プロバイダーは、現在の状況での厳しい競争により、既存の顧客を維持するという課題に直面しています。 この会社では、1 つのアカウントに多くの顧客をタグ付けすることができるため、1 つのアカウントが失われると、会社は複数の顧客を失う可能性があります。 同時に、古い顧客を維持するよりも、新しい顧客に製品を宣伝する方が多くの場合、費用がかかります。 したがって、アカウントを残すことは大きな問題です。 顧客離れ予測とは、どの顧客がサービスを離れたり、サービスから退会する可能性が高いかを検出することを意味します。 キャンセルのリスクがある顧客を特定できたら、顧客が滞在する可能性を最大化するために、個々の顧客に対してどのようなマーケティング活動を行うべきかを正確に把握する必要があります。
+ <b>あなたの仕事は、既存のデータセットに基づいて構築し、顧客が将来離れていく可能性を予測できるモデルを構築することです</b>
+* ソースコードにはメインファイルが含まれています:
+  - description.csv: データセット内のフィールドを記述した csv ファイル
+  - train.csv: 分割後のトレーニングセット。
+  - test.csv: 分割後のテスト セット
+  - split_data.py: python ファイルは、元のデータ セットを train.csv と test.csv の 2 つのファイルに分割するために使用され、データ セット内の異種で異なる値を埋めるためにも使用されます。
+  - exp: 以下を含むメインのアクティブ ディレクトリ:
+    - EDA.ipynb: データ マイニング用のノートブック ファイル
+    - Datapipeline.py: Python ファイルはデータ処理パイプラインを作成します
+    - OutlierHandling.py: 
+    - CrossValidation.ipynb: クロステストによって評価された、モデルのテストと選択のためのノートブック ファイル
+    - Predict.ipynb:ノートブック ファイルがテスト セットで再度予測する
