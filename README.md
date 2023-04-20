@@ -2,6 +2,7 @@
 #Customer Churn Prediction
 ## 指示する。
 * データセットへのリンク: https://www.kaggle.com/code/vsridevi/capstone-project-churn-prediction/data?scriptVersionId=110749928
+
 *報告: https://docs.google.com/document/d/1IQdUR-XHCYsbHscnIVvwsR4U5K6VlYyd/edit?usp=sharing&ouid=110195261401779590280&rtpof=true&sd=true
 * 説明:
   市場の DTH (Direct to Home) サービス プロバイダーは、現在の状況での厳しい競争により、既存の顧客を維持するという課題に直面しています。 この会社では、1 つのアカウントに多くの顧客をタグ付けすることができるため、1 つのアカウントが失われると、会社は複数の顧客を失う可能性があります。 同時に、古い顧客を維持するよりも、新しい顧客に製品を宣伝する方が多くの場合、費用がかかります。 したがって、アカウントを残すことは大きな問題です。 顧客離れ予測とは、どの顧客がサービスを離れたり、サービスから退会する可能性が高いかを検出することを意味します。 キャンセルのリスクがある顧客を特定できたら、顧客が滞在する可能性を最大化するために、個々の顧客に対してどのようなマーケティング活動を行うべきかを正確に把握する必要があります。
