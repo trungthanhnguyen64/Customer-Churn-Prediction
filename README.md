@@ -16,5 +16,5 @@
     - EDA.ipynb: データ マイニング用のノートブック ファイル
     - Datapipeline.py: Python ファイルはデータ処理パイプラインを作成します
     - OutlierHandling.py: 
-    - CrossValidation.ipynb: クロステストによって評価された、モデルのテストと選択のためのノートブック ファイル
-    - Predict.ipynb:ノートブック ファイルがテスト セットで再度予測する
+    - CrossValidation: クロステストによって評価された、モデルのテストと選択のためのノートブック ファイル
+    - Predict:ノートブック ファイルがテスト セットで再度予測する
